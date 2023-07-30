@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #303030;
+  height: 100vh;
 }
 
 .App-logo {
@@ -20,6 +22,20 @@
 
 .App-link {
   color: #61dafb;
+}
+.navbar-brand {
+  font-size: 2em !important;
+  margin-left: .75em;
+  color: red !important;
+}
+
+nav p {
+  color: white !important;
+}
+
+
+h1 {
+  color: white !important;
 }
 
 
