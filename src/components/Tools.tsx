@@ -7,6 +7,10 @@ import type { MenuProps } from "antd";
 function Tools(props: any) {
 
 
+    /**
+     * Sorts movies in descending order
+     * @param item to sort by from movie object
+     */
     const orderDesc = (item: any) => {
       console.log(item)
         props.setMovies({
@@ -15,6 +19,10 @@ function Tools(props: any) {
         });
     }
 
+     /**
+     * Sorts movies in ascending order
+     * @param item to sort by from movie object
+     */
     const orderAsc = (item: any) => {
       console.log(item)
         props.setMovies({
@@ -50,16 +58,16 @@ function Tools(props: any) {
   return (
     <div className="Tools">
          <Dropdown className="genre_dropdown" menu={{ items }}>
-        <Button className="genre_dropdown">
-          <Space className="genre_dropdown">
-            Button
+        <Button>
+          <Space >
+            Genre
             <DownOutlined />
           </Space>
         </Button>
       </Dropdown>
       <Dropdown className="genre_dropdown" menu={{ items }}>
-        <Button className="genre_dropdown">
-          <Space className="genre_dropdown">
+        <Button >
+          <Space >
             Order By
             <DownOutlined />
           </Space>

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #303030;
+  background-color: #202020;
   min-height: 100vh;
   height: auto;
 }
@@ -10,7 +10,7 @@
 .navbar-brand {
   font-size: 2em !important;
   margin-left: .75em;
-  color: red !important;
+  color: #E0282E!important;
 }
 
 nav p {
@@ -53,10 +53,19 @@ h1 {
   font-size: 1.25em;
 }
 
+
+
+.Tools {
+  margin: none;
+  width: fit-content;
+  margin-left: 8.5em;
+
+}
 .genre_dropdown {
-  background-color: #282c34;
+  background-color: #101010;
   color: white;
   border: none;
+  margin: 1em;
 
 }
 

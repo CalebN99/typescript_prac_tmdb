@@ -20,7 +20,7 @@ function Movies(props: any) {
                 alt="movie poster"
               />
               <p className="movie_title">{movie.title}</p>
-              <p className="movie_title">{movie.vote_average}</p>
+              {/* <p className="movie_title">{movie.vote_average}</p> */}
             </div>
           );
         })}
