@@ -3,9 +3,9 @@ import "./styles/App.css";
 import NavB from "./components/NavB";
 import Movies from "./components/Movies";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Tools from "./components/Tools";
 
 import { Spin } from 'antd';
-
 
 function App() {
 
@@ -32,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <NavB />
+      <Tools movies={data} setMovies={setData}/>
       {
         data !== 0 ? <Movies movies={data} /> : <Spin size="large"/>
       }

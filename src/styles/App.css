@@ -32,7 +32,6 @@ h1 {
 
 .movie_card {
   width: 16em;
-  border: 1px solid blue;
 }
 
 .movie_card:hover {
