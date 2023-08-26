@@ -72,9 +72,11 @@ h1 {
 .modal_image {
   background-color: #282c34;
   width: 70em;
-  height:30em;
+  min-width: none;
+  height: auto;
   padding: 0;
-  display: inline-block
+  display: inline-block;
+  background-size: 100% !important;
 }
 
 .modal_image h3 {
@@ -102,5 +104,22 @@ h1 {
   background-color: #101010 !important;
   color: white;
 }
+
+.modal_desc {
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+#star {
+  font-size: 1.4em !important;
+  display: inline-block !important;
+  padding-left: .15em;
+}
+
+.ant-modal-close-icon {
+  color: white !important;
+}
+
+
 
 
