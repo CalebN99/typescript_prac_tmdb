@@ -69,4 +69,38 @@ h1 {
 
 }
 
+.modal_image {
+  background-color: #282c34;
+  width: 70em;
+  height:30em;
+  padding: 0;
+  display: inline-block
+}
+
+.modal_image h3 {
+
+  padding-left: .75em;
+  display: inline-block;
+  padding-top: 13.5em;
+}
+
+.modal_image p {
+  font-size: 1.5em;
+  padding-left: 1em;
+  display: inline-block;
+}
+
+.ant-modal {
+  width: 70em !important;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #101010 !important;
+}
+
+.ant-modal-content {
+  padding: 0 !important;
+  background-color: #101010 !important;
+  color: white;
+}
+
 

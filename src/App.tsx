@@ -28,11 +28,23 @@ function App() {
      
   }, []);
 
+  let genreSearch = (genre: Number) => {
+    try {
+      fetch(
+        "https://api.themoviedb.org/3/discover/movie?api_key=742b4f9ef0f1842c765810ec16e2e95a&with_genres=" + genre
+      )
+        .then((res) => res.json())
+        .then(setData);
+    } catch(err) {
+      console.log(err);
+    }
+  }
+
 
   return (
     <div className="App">
       <NavB />
-      <Tools movies={data} setMovies={setData}/>
+      <Tools genreSearch={genreSearch} movies={data} setMovies={setData}/>
       {
         data !== 0 ? <Movies movies={data} /> : <Spin size="large"/>
       }
