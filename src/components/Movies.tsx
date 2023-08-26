@@ -6,11 +6,25 @@ import { StarOutlined } from "@ant-design/icons";
 import { Modal } from "antd";
 
 function Movies(props: any) {
+  class ModalMovie {
+    image: string;
+    title: string;
+    rating: number;
+    desc: string;
+
+    constructor(image: string, title: string, rating: number, desc: string) {
+      this.image = image;
+      this.title = title;
+      this.rating = rating;
+      this.desc = desc;
+    }
+  }
+
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [backgroundImage, setBackgroundImage] = useState<String>("");
-  const [modalTitle, setModalTitle] = useState<String>("");
-  const [modalRating, setModalRating] = useState<Number>(0);
-  const [modalDesc, setModalDesc] = useState<String>("");
+
+  const [ModalData, setModalData] = useState<ModalMovie>(
+    new ModalMovie("", "", 0, "")
+  );
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -33,21 +47,17 @@ function Movies(props: any) {
    */
 
   let setMovieModal = (
-    image: String,
-    title: String,
-    rating: Number,
-    description: String
+    image: string,
+    title: string,
+    rating: number,
+    description: string
   ) => {
-    setBackgroundImage(image);
-    setModalTitle(title);
-    setModalRating(rating);
-    setModalDesc(description);
-
+    setModalData(new ModalMovie(image, title, rating, description));
     showModal();
   };
 
   return (
-    <div className="Movies">
+    <div className="Movies" id="Movies">
       <div className="movie_card_grid">
         {props.movies.results.map((movie: any) => {
           return (
@@ -82,24 +92,21 @@ function Movies(props: any) {
         cancelButtonProps={{ style: { display: "none" } }}
         okButtonProps={{ style: { display: "none" } }}
         // closeIcon={<CloseOutlined id="modalX"/>}
-
       >
         <div
           style={{
             background: ` linear-gradient(
           rgba(0, 0, 0, 0.7), 
           rgba(0, 0, 0, 0.7)
-        ), url(https://image.tmdb.org/t/p/w1280/${backgroundImage}) no-repeat`,
+        ), url(https://image.tmdb.org/t/p/w1280/${ModalData.image}) no-repeat`,
           }}
           className="modal_image"
         >
-          <h3>{modalTitle}</h3>
-          <p>
-            {modalRating.toString()}
-          </p>
+          <h3>{ModalData.title}</h3>
+          <p>{ModalData.rating.toString()}</p>
           <StarOutlined id="star" />
         </div>
-        <p className="modal_desc">{modalDesc}</p>
+        <p className="modal_desc">{ModalData.desc}</p>
       </Modal>
     </div>
   );

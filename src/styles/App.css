@@ -5,33 +5,31 @@
   height: auto;
 }
 
-
-
 .navbar-brand {
   font-size: 2em !important;
-  margin-left: .75em;
-  color: #E0282E!important;
+  margin-left: 0.75em;
+  color: #e0282e !important;
 }
 
 nav p {
   color: white !important;
 }
 
-
 h1 {
   color: white !important;
 }
 
+
 .movie_card_grid {
- display: flex;
- flex-wrap: wrap;
- gap: 20px;
- padding: 0;
- justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  justify-content: center;
 }
 
 .movie_card {
-  width: 16em;
+  width: 18em;
 }
 
 .movie_card:hover {
@@ -44,8 +42,8 @@ h1 {
 }
 
 .movie_image_small {
-  min-width: 14em;
-  min-height: 12em;
+  min-width: 18em;
+  min-height: auto;
   background-color: #282c34;
 }
 .movie_title {
@@ -53,26 +51,21 @@ h1 {
   font-size: 1.25em;
 }
 
-
-
 .Tools {
   margin: none;
   width: fit-content;
   margin-left: 8.5em;
-
 }
 .genre_dropdown {
   background-color: #101010;
   color: white;
   border: none;
   margin: 1em;
-
 }
 
 .modal_image {
   background-color: #282c34;
   width: 70em;
-  min-width: none;
   height: auto;
   padding: 0;
   display: inline-block;
@@ -80,8 +73,7 @@ h1 {
 }
 
 .modal_image h3 {
-
-  padding-left: .75em;
+  padding-left: 0.75em;
   display: inline-block;
   padding-top: 13.5em;
 }
@@ -113,13 +105,9 @@ h1 {
 #star {
   font-size: 1.4em !important;
   display: inline-block !important;
-  padding-left: .15em;
+  padding-left: 0.15em;
 }
 
 .ant-modal-close-icon {
   color: white !important;
 }
-
-
-
-
