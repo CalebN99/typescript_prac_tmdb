@@ -10,11 +10,14 @@ import { Spin } from "antd";
 function App() {
   let [data, setData] = useState(0);
 
+
+  let apiKey = "";
+  
   useEffect(() => {
     setTimeout(() => {
       try {
         fetch(
-          "https://api.themoviedb.org/3/discover/movie?api_key=742b4f9ef0f1842c765810ec16e2e95a"
+          `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`
         )
           .then((res) => res.json())
           .then(setData);
@@ -22,12 +25,12 @@ function App() {
         console.log(err);
       }
     }, 1000);
-  }, []);
+  }, [apiKey]);
 
   let genreSearch = (genre: Number) => {
     try {
       fetch(
-        "https://api.themoviedb.org/3/discover/movie?api_key=742b4f9ef0f1842c765810ec16e2e95a&with_genres=" +
+        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=` +
           genre
       )
         .then((res) => res.json())
