@@ -32,19 +32,35 @@ function Tools(props: any) {
   const orders: MenuProps["items"] = [
     {
       key: "1",
-      label: <p onClick={() => orderDesc("popularity")}>Popularity <DownOutlined /></p>,
+      label: (
+        <p onClick={() => orderDesc("popularity")}>
+          Popularity <DownOutlined />
+        </p>
+      ),
     },
     {
       key: "2",
-      label: <p onClick={() => orderAsc("popularity")}>Popularity <UpOutlined /></p>,
+      label: (
+        <p onClick={() => orderAsc("popularity")}>
+          Popularity <UpOutlined />
+        </p>
+      ),
     },
     {
       key: "3",
-      label: <p onClick={() => orderDesc("vote_average")}>Rating <DownOutlined /></p>,
+      label: (
+        <p onClick={() => orderDesc("vote_average")}>
+          Rating <DownOutlined />
+        </p>
+      ),
     },
     {
       key: "4",
-      label: <p onClick={() => orderAsc("vote_average")}>Rating <UpOutlined /></p>,
+      label: (
+        <p onClick={() => orderAsc("vote_average")}>
+          Rating <UpOutlined />
+        </p>
+      ),
     },
   ];
 
